@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Minha página</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    
+    
+    </style>
+</head>
+
+<body>
+    <!-- NAVEGATION BAR -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label> 
+        <label class="logo">Minha página</label>
+        <ul>
+            <li class="dropdown"><a href="#">Menu</a>
+                <div class="dropdown-child">
+                    <ul>
+                        <li><a href="../animation/animation.html" target="_blank">Animação</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../index.html">Artigo</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h3>Entre em contato comigo</h3>
+        <div>
+            <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST" />
+                <label for="label">Seu nome:</label><br>
+                <input class="input" type="text" id="fname" name="name" required><br>
+                <label for="label">Sua mensagem:</label><br>
+                <textarea class="input" placeholder="Digite aqui" name="textarea" required></textarea><br> 
+                <label for="label">Seu email:</label><br>
+                <input class="input" type="email" id="email" name="email" aria-required=""><br>
+                <label for="label">Seu número de telefone: (opcional)</label><br>            
+                <input class="input" type="tel" id="phone" name="phone"><br>          
+                <h4><strong>Forma de contato preferida:</strong></h4>
+                <input type="checkbox" id="contato1" name="contato1" value="Email"> 
+                <label for="label">Email</label>
+                <input type="checkbox" id="contato2" name="contato2" value="Whatsapp">
+                <label for="label">Whatsapp</label><br>       
+                <input type="image" src="send.png" alt="Submit" width="48" height="48"><br>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy;Developed by Jéssica Bandeira</p>
+    </footer>
+    
+</body>
+</html>
