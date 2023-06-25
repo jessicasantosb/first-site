@@ -8,50 +8,37 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Minha página</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    
+    <script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <!-- NAVEGATION BAR -->
   <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label> 
-        <label class="logo">Minha página</label>
-        <ul>
-            <li class="dropdown"><a href="#">Menu</a>
-                <div class="dropdown-child">
-                    <ul>
-                        <li><a href="animation/animation.html" target="_blank">Animação</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="contact/contact.css">Contato</a></li>
-        </ul>
-    </nav>
+    <label class="logo">Minha página</label>
+    <p id="btn-pdf"> gerar PDF</p>      
+    <ul> 
+        <ul class="dropdown closed">
+          <li><a class="dropdown-child" href="#">Menu</a></li> 
+          <li><a href="animation/animation.html" target="_blank">Animação</a></li>
+          <li><a href="contact/contact.html">Contato</a></li>
+        </ul>             
+    </ul>
+  </nav>
     
 <!-- TÓPICOS -->
-  <section id="topicos">
-      <div class="topico1">
+  <section>
+      <div id="topics">
+        <div class="gtranslate_wrapper"></div>
           <h2>Tópicos desse artigo</h2>
-          <ul>
-            <li><a href="#resumo-container" >Resumo sobre o programa Artemis</a></li>
-            <li><a href="#objetivos-container" >Objetivos do programa Artemis</a></li>
-          </ul>
-      </div>
-      <div class="topico2">
-        <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST" />
-          <h2>Escolha  próximo tema:</h2>        
-          <input type="text" id="fmessage" name="message">
-          <input id="btn-tema" type="submit" value="Enviar" name="send"><br>
-        </form> 
+            <a class="topics-li" href="#resumo-container" >Resumo sobre o programa Artemis</a><br>
+            <a class="topics-li" href="#objetivos-container" >Objetivos do programa Artemis</a>
       </div>
   </section>
   <hr>    
 
     
 <!-- ARTICLE -->
-  <article id="artigo">       
+  <article id="article">       
       <aside>
         <table>
           <th><img class="rocket" src="rocket.png" height="150px" width="180px"></th>
@@ -72,6 +59,7 @@
             <tr><td><a href="https://pt.wikipedia.org/wiki/Complexo_39_de_lan%C3%A7amento_do_Centro_Espacial_Kennedy">Kennedy Space Center</a></td>
           </tr>
         </table>
+        <div class="html2pdf__page-break"></div>
       </aside> <!-- ENDING ASIDE SECTION -->
       
       <section id="resumo-container">                
@@ -112,7 +100,7 @@
       <hr>
 
       <section id="objetivos-container"> 
-                
+          <div class="html2pdf__page-break"></div>
           <div class="objetivo-1">
             <h2>Objetivos</h2>
             <p class="first-letter">O programa Artemis, desenvolvido pela Nasa com a parceria de empresas privadas, como a SpaceX e a Blue Origin, pretende enviar os seres humanos novamente à superfície da Lua, repetindo o feito que aconteceu há mais de meio século, mais precisamente nos anos de 1969 e 1972. Desta vez, a intenção é a de que caminhem pelo satélite natural a primeira mulher e a primeira pessoa negra, os quais compõem uma equipe mais diversa do que as anteriores. No entanto, essa é uma etapa intermediária, que viabilizará o principal objetivo do programa Artemis.</p>
@@ -144,18 +132,27 @@
             <p>De acordo com as informações da Nasa, o programa tem dois objetivos gerais. O primeiro deles é o de avançar na exploração e nas descobertas científicas espaciais, visando a compreender melhor a origem e a história do nosso planeta, da Lua e do Sistema Solar. Para isso, a Nasa pretende estabelecer uma base fixa no satélite, com instalações para o trabalho e moradia temporária dos astronautas, onde a presença humana será recorrente.
 
               O segundo objetivo do programa Artemis, e talvez o principal deles, é o de que a experiência adquirida com a utilização de novas tecnologias e as habilidades desenvolvidas na nova missão à Lua representem um teste para a exploração de Marte, tendo em vista a pretensão da Nasa de enviar astronautas para o planeta na década de 2030. Nesse projeto, a Lua desempenhará a função de base auxiliar.</p>
-          </div>          
-      </section> <!-- ENDING OBJETIVOS SECTION -->     
+          </div>
+      </section> <!-- ENDING OBJETIVOS SECTION -->
     </article> <!-- ENDING ARTICLE GRID SECTION -->
 
 <!-- FOOTER -->
   <footer>
-      <div>
-        <p>Fontes:</p>
-        <a href="https://pt.wikipedia.org/wiki/Programa_Artemis" target="_blank">Wikipedia</a>
-        <a href="https://brasilescola.uol.com.br/fisica/programa-artemis.htm" target="_blank">Brasil Escola</a>
-      </div>
-    <p class="footer-P">&copy;Developed by Jéssica Bandeira</p>
+    <div>
+      <p>Fontes:</p>
+      <a href="https://pt.wikipedia.org/wiki/Programa_Artemis" target="_blank">Wikipedia</a>
+      <a href="https://brasilescola.uol.com.br/fisica/programa-artemis.htm" target="_blank">Brasil Escola</a>
+    </div>
+    <p class="footer-P">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      Developed by jessicasantosb
+      <a href="https://github.com/jessicasantosb" target="_blank">
+        <img class="footer-link" src="github.png" alt="github" style="height: 60px;">
+      </a>
+    </p>
   </footer>
 
 <script src="script.js"></script>

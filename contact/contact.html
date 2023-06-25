@@ -5,37 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Minha página</title>
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-    
-    
-    </style>
+    <script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script>
 </head>
 
 <body>
     <!-- NAVEGATION BAR -->
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label> 
-        <label class="logo">Minha página</label>
-        <ul>
-            <li class="dropdown"><a href="#">Menu</a>
-                <div class="dropdown-child">
-                    <ul>
-                        <li><a href="../animation/animation.html" target="_blank">Animação</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="../index.html">Artigo</a></li>
+        <label class="logo">Minha página</label>    
+        <ul> 
+            <ul class="dropdown closed">
+              <li><a class="dropdown-child" href="#">Menu</a></li> 
+              <li><a href="../animation/animation.html" target="_blank">Animação</a></li>
+              <li><a href="../index.html">Artigo</a></li>
+            </ul>             
         </ul>
     </nav>
 
     <section>
+        <div class="gtranslate_wrapper"></div>
         <h3>Entre em contato comigo</h3>
-        <div>
+        <div id="form">
             <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST" />
                 <label for="label">Seu nome:</label><br>
                 <input class="input" type="text" id="fname" name="name" required><br>
@@ -57,8 +49,27 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy;Developed by Jéssica Bandeira</p>
+        <p>&copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Developed by jessicasantosb
+        </p>
+        <a href="https://github.com/jessicasantosb" target="_blank">
+            <img class="footer-link" src="../github.png" alt="github" style="height: 60px;">
+        </a>
     </footer>
+
+<script>
+    // LANGUAGE SETTINGS
+    window.gtranslateSettings = {"default_language":"pt","detect_browser_language":true,"languages":["pt","fr","de","it","es","ar","en"],"globe_color":"#212A3E","wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}},
     
+    // DROPDOWN NAVIGATION BAR
+    (function() {
+        document.querySelector('.dropdown-child').addEventListener('click', function() {
+          this.parentNode.parentNode.classList.toggle('closed')
+        }, false);
+    })();
+</script>
 </body>
 </html>
